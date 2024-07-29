@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <h2>Dashboard</h2>
+    {% if current_user.is_authenticated %}
+        Hi {{ current_user.email }}!<br><br>
+        <ul>
+            <li><a href="#">Calculate Sample</a></li>
+            <li><a href="#">My Sample Sizes</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">My Profile</a></li>
+        </ul>
+    {% endif %}
+{% endblock %}
